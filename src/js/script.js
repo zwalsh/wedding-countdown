@@ -61,9 +61,9 @@ function setImage(currentDate) {
   setImageByOffset(offset);
 }
 
-function setDaysUntilWedding(currentDate) {
-  // Specify the target date
-  const targetDate = new Date('2024-06-22');
+function calcDaysUntilWedding(currentDate) {
+  // Specify the target date, force user's timezone with 00:00 (instead of GMT)
+  const targetDate = new Date('2024-06-22 00:00');
 
   // Calculate the time difference in milliseconds
   const timeDiff = targetDate.getTime() - currentDate.getTime();
@@ -71,9 +71,15 @@ function setDaysUntilWedding(currentDate) {
   // Convert milliseconds to days
   const daysUntilTargetDate = Math.ceil(timeDiff / (1000 * 3600 * 24));
 
-  // Set the number of days as the innerHTML of the element with id "day-count"
-  document.getElementById('day-count').innerHTML = daysUntilTargetDate;
+  return daysUntilTargetDate
 }
+
+function setDaysUntilWedding(currentDate) {
+  const daysUntilWedding = calcDaysUntilWedding(currentDate);
+  // Set the number of days as the innerHTML of the element with id "day-count"
+  document.getElementById('day-count').innerHTML = daysUntilWedding;
+}
+
 //
 //var curOffset = 0;
 //
