@@ -4,7 +4,7 @@ html, body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  font-family: "Sacramento";
+  font-family: "Euphoria Script";
 }
 
 main {
@@ -19,12 +19,13 @@ main {
 p {
   text-align: center;
   font-weight: bold;
-  font-size: 40px;
-  margin-top: 10px;
+  font-size: 60px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 #day-count {
-  font-size: 80px;
+  font-size: 150px;
   margin-bottom: 10px;
   font-weight: bold;
 }

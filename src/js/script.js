@@ -36,7 +36,8 @@ const imageList = [
     "IMG_7247.png",
     "IMG_7709.png",
     "IMG_8665.png",
-    "IMG_9160.png"
+    "IMG_9160.png",
+    "IMG_8993.png"
 ];
 
 function dayOfYear(date) {
